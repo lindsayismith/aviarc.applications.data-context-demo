@@ -1,0 +1,30 @@
+<screen xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action:1" xmlns:app="urn:aviarc:widget:application" xmlns:data-utils="urn:aviarc:widget:data-utils:1.0.0">
+    <data-utils:datacontext>
+        <static-datasets>
+            <dataset name="countries">
+                <row>
+                    <field name="name" value="Australia" />
+                </row>
+                <row>
+                    <field name="name" value="Great Britain" />
+                </row>
+                <row>
+                    <field name="name" value="Korea" />
+                </row>
+            </dataset>            
+        </static-datasets>
+        <group-box height="500" left="75" width="335" top="46" title="Static Data">
+            <record-table width="261" height="159" left="31" top="38" dataset="countries">                
+                <column width="0" display-field="name" header="Name" />
+                
+            </record-table>
+            <text-edit width="187" height="26" left="32" top="233" field="countries.name" />
+        </group-box>
+    </data-utils:datacontext>                    
+                            
+                    
+            
+    <app:search-pane width="598" height="230" left="477" top="46" state="NSW"/>
+    
+    <app:search-pane width="598" height="230" left="477" top="316" state="QLD"/>
+</screen>

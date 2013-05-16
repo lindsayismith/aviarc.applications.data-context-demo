@@ -1,0 +1,6 @@
+<do>
+    <dataset name="search-input"/>
+    <create-row dataset="search-input"/>
+    <set-field field="search-input.search-string" value="Search {$parameters.state}"/>
+    <dataset name="results"/>
+</do>

@@ -1,0 +1,6 @@
+<widget name="search-pane"  container-positioning="y" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
+    <attributes>
+        <attribute name="state" type="string" mandatory="true"/>
+    </attributes>
+    <children allowed="n"/>
+</widget>

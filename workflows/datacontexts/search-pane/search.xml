@@ -1,0 +1,11 @@
+<workflow>
+    <delete-all-rows dataset="results"/>
+    <create-row dataset="results"/>
+    <set-field field="results.name" value="Result1, {$search-input.search-string} state {$parameters.state}"/>    
+
+    <create-row dataset="results"/>
+    <set-field field="results.name" value="Result2, {$search-input.search-string} state {$parameters.state}"/>
+    
+    <create-row dataset="results"/>
+    <set-field field="results.name" value="Result2, {$search-input.search-string} state {$parameters.state}"/>
+</workflow>

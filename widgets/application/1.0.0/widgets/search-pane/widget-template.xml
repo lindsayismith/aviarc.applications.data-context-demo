@@ -1,0 +1,19 @@
+<group-box xmlns:data-utils="urn:aviarc:widget:data-utils:1.0.0"
+    xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action:1"
+    width="{@width}" height="{@height}" left="{@left}" right="{@right}" top="{@top}" bottom="{@bottom}" title="Search {@state}" position="{@position}" margin="{@margin}" margin-top="{@margin-top}" margin-bottom="{@margin-bottom}" margin-left="{@margin-left}" margin-right="{@margin-right}" padding="{@padding}" padding-top="{@padding-top}" padding-bottom="{@padding-bottom}" padding-left="{@padding-left}" padding-right="{@padding-right}">
+    <data-utils:datacontext workflow="datacontexts/search-pane/initialize">
+        <workflow-parameters>
+            <param name="state" value="{@state}"/>
+        </workflow-parameters>
+        
+        <text-edit width="220" height="26" left="46" top="30" field="search-input.search-string"/>
+        <button width="100" height="26" left="287" top="30" label="Search">
+            <action:when event="onclick">
+                <action:call-ajax-workflow name="datacontexts/search-pane/search"/>
+            </action:when>
+        </button>
+        <record-table width="482" height="112" left="50" top="80" dataset="results">
+            <column display-field="name" header="name"/>
+        </record-table>
+    </data-utils:datacontext>
+</group-box>
